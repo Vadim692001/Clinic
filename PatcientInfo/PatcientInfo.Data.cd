@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatcientInfo.IO.BinarySerializationController">
+    <Position X="4" Y="1.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>IO\BinarySerializationController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.IO.XmlIOController">
+    <Position X="4" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAACAAAAEAAAAAAAAgAAAAABgAAAAEAAQACAAA=</HashCode>
+      <FileName>IO\XmlIOController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.Data.DateSet" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.25" />
+    <AssociationLine Name="DicaseTypes" Type="PatcientInfo.Entities.DicaseType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.081" Y="0.6" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAQAEAAAoAAAAQABAAAAgAAAAEAACAAA=</HashCode>
+      <FileName>Data\DateSet.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="DicaseTypes" />
+      <Property Name="Discases" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.Data.DataContext">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAgJAIAAAQAQAEAAAoIAAACABAAAAgAAAAAABACAA=</HashCode>
+      <FileName>Data\DataContext.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dateSet" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Patcients" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.Entities.DicaseType" Collapsed="true">
+    <Position X="10.25" Y="1.25" Width="1.5" />
+    <AssociationLine Name="Parent" Type="PatcientInfo.Entities.DicaseType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.913" Y="0.048" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAEIAAAQAAAgAAABAAgAEBAAAAAAAA=</HashCode>
+      <FileName>Entities\DicaseType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discases" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PatcientInfo.Entities.Discase" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAYAAAAAAAEIAAAAAAAAAAAAAACAEBEAAAAAgA=</HashCode>
+      <FileName>Entities\Discase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DicaseType" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PatcientInfo.Entities.Patcient" Collapsed="true">
+    <Position X="9" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAgQAAEIAAAAAIAAAAAAAQBIAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Patcient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PatcientInfo.Data.Interfeces.IDateSet">
+    <Position X="6.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAABAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Interfeces\IDateSet.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PatcientInfo.IO.Interfaces.IFileIOController">
+    <Position X="3.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAA=</HashCode>
+      <FileName>IO\Interfaces\IFileIOController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PatcientInfo.Web.Models.PatcientTableModel>
+
+
+@foreach (var item in Model)
+{
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sorname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.DicaseName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Doctor)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Medical_card)
+    </td>
+    
+</tr>
+}

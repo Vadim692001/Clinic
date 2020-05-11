@@ -1,0 +1,36 @@
+﻿@*@model PatcientInfo.Entities.Patcient*@
+@model IEnumerable<PatcientInfo.Entities.Patcient>
+
+@{ ViewBag.Title = "PatcientByRegionsInfo";
+    Layout = "~/Views/Shared/_CategoryLayout.cshtml";
+}
+
+<h2>PatcientByRegionsInfo</h2>
+
+<h2>Пацієнти та хвороби</h2>
+
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Sorname</strong>
+            </h3>
+            <strong class="lead">Хвороби: @m.Dicase</strong><br />
+        </div>
+    </div>
+}
+
+
+@section NavMenu {
+    @Html.Action("PatcientByRegionsMenu", "Navigation",
+         new { categoryName = ViewBag.SelectedCategoryName })
+
+}
+
+
+<div>
+    @Html.ActionLink("Назад", "Index")
+</div>
+

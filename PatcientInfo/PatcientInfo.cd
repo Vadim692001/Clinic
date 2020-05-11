@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatcientInfo.Entities.Patcient">
+    <Position X="2.25" Y="1.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAgQAAEIAAAAAIAAAAAAAQBIAAEAAEAAAA=</HashCode>
+      <FileName>Entities\Patcient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Entities.DicaseType">
+    <Position X="9.25" Y="1.5" Width="2.25" />
+    <AssociationLine Name="Parent" Type="PatcientInfo.Entities.DicaseType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.786" Y="0.019" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CildsOjects" Type="PatcientInfo.Entities.DicaseType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.5" Y="2.432" />
+        <Point X="11.75" Y="2.432" />
+        <Point X="11.75" Y="3.188" />
+        <Point X="11.5" Y="3.188" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAEIAAAQAAAgAAABAAgAEBAAAAAAAA=</HashCode>
+      <FileName>Entities\DicaseType.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Parent" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Discases" />
+      <Property Name="CildsOjects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PatcientInfo.Entities.Discase">
+    <Position X="5.75" Y="1.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAYAAAAAAAEIAAAAAAAAAAAAAACAEBEAAAAAgA=</HashCode>
+      <FileName>Entities\Discase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DicaseType" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Patcients" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Common.Entities.Entity">
+    <Position X="6.25" Y="4.75" Width="1.25" />
+    <TypeIdentifier />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,60 @@
+﻿@model PatcientInfo.Web.Models.Dicase.DiscacaseEditingModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Хвороба</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DicaseTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DicaseTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripotion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripotion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+      
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>*@
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Назад", "Index")
+</p>

@@ -1,0 +1,18 @@
+﻿@*@model PatcientInfo.Web.Models.PatcientInfoModel*@
+@model IEnumerable<PatcientInfo.Web.Models.PatcientInfoModel>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Sorname</strong>
+            </h3>
+            <strong class="lead"> Хвороба: @m.DicaseName</strong><br />
+            <strong class="lead">Лікарь: @m.Doctor</strong><br />
+            <strong class="lead">Палата: @m.Medical_card </strong><br />
+        </div>
+    </div>
+}
+
+

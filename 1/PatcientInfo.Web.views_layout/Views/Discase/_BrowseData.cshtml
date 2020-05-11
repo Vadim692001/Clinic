@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<PatcientInfo.Web.Models.Dicase.DicaseInfoModel>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Nazva</strong>
+            </h3>
+            <strong class="lead"> Вид хвороби: @m.DicaseTypeName</strong><br />
+           
+        </div>
+    </div>
+}
+
+

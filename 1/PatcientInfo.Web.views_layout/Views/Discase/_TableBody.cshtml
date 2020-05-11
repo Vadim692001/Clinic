@@ -1,0 +1,21 @@
+﻿@model IEnumerable<PatcientInfo.Web.Models.Dicase.DiscaseTableModel>
+
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nazva)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DicaseTypeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripotion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.note)
+        </td>
+
+    </tr>
+}

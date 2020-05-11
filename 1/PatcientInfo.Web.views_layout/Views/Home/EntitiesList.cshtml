@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "EntitiesList";
+}
+
+<h2>Додаткова інформація</h2>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Додаткова інформація</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="navbar navbar-inverse">
+        <a class="navbar-brand hidden-xs" href="/">
+            ПО "Пацієнти": інформація про пацієнтів і хворби
+        </a>
+        <a class="navbar-brand visible-xs" href="/">ПО "Пацієнтів"</a>
+    </div>
+    <div class="row panel">
+        @Html.ActionLink("Пацієнти", "Index", "Patcient", null,
+            new { @class = "btn btn-block btn-default btn-lg" })
+        @Html.ActionLink("Хвороби",
+            "Index", "Discase", null,
+            new { @class = "btn btn-block btn-default btn-lg" })
+        @Html.ActionLink("Види хвороб",
+           "Index", "DiscaseType", null,
+           new { @class = "btn btn-block btn-default btn-lg" })
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@*@model PatcientInfo.Domain.Patcient*@
+@model IEnumerable<PatcientInfo.Entities.Patcient>
+
+@{
+    //ViewBag.Title = "ObjectsInfo";
+    ViewBag.Title = "Пацієнти";
+}
+
+@*<h2>ObjectsInfo</h2>*@
+<h2>Пацієнти</h2>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong class="lead">ПІБ Пацієнта:@m.Sorname</strong>
+            </h3>
+            <strong class="lead">Дата: @m.Date</strong><br />
+            <strong class="lead">Медична кардка: @m.Medical_card </strong><br />
+            <strong class="lead">Вид хвороби: @m.Dicase </strong><br />
+            <strong class="lead">Лікарь: @m.Doctor </strong><br />
+
+
+            <strong class="lead">Номер палати: @m.number_Chamber </strong><br />
+
+        </div>
+    </div>
+    @Html.Action("_DescriptiveInfo", new { id = @m.Id })
+
+
+    <div>
+        @Html.ActionLink("Назад", "Index")
+    </div>
+
+
+}
+

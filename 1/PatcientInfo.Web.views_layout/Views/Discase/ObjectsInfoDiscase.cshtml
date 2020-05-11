@@ -1,0 +1,34 @@
+﻿@*@model PatcientInfo.Domain.Discase*@
+@model IEnumerable<PatcientInfo.Entities.Discase>
+
+@{
+    //ViewBag.Title = "ObjectsInfoDiscase";
+    ViewBag.Title = "Хвороби";
+}
+
+@*<h2>ObjectsInfoDiscase</h2>*@
+<h2>Хвороби</h2>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong class="lead">Назва хвороби:@m.Nazva</strong>
+            </h3>
+            <strong class="lead">Вид хвороби: @m.DicaseType</strong><br />
+            <strong class="lead">Опис: @m.Descripotion </strong><br />
+            <strong class="lead">Примітки: @m.note </strong><br />
+
+
+        </div>
+    </div>
+    @Html.Action("_DescriptiveInfo", new { id = @m.Id })
+}
+
+
+
+<div>
+    @Html.ActionLink("Назад", "Index")
+</div>
+

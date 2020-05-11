@@ -1,0 +1,66 @@
+﻿@model PatcientInfo.Web.Models.PatcientEditingModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Видалення</h2>
+
+
+<div>
+    <h4>Пацієнти</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Sorname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sorname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DicaseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DicaseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Doctor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Doctor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Medical_card)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Medical_card)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.number_Chamber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.number_Chamber)
+        </dd>
+
+   
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Видалити" class="btn btn-default" /> |
+            @Html.ActionLink("Повернутися назад", "Index")
+        </div>
+    }
+</div>

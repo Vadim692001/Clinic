@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatcientInfo.IO.BinarySerializationController">
+    <Position X="4.5" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.IO.XmlIOController">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PatcientInfo.Data.DataContext">
+    <Position X="1" Y="5" Width="2.25" />
+    <TypeIdentifier />
+    <ShowAsAssociation>
+      <Property Name="FileIOController" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PacientInfoConsoleEditor.Program">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAABoAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="dataContext" />
+      <Field Name="fileIOControllersSelector" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PatcientInfo.ConsoleIO.Selection.FileIOControllersSelector">
+    <Position X="6.25" Y="3.5" Width="2.25" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="PacientInfoConsoleEditor.DicaseManager">
+    <Position X="15.5" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAAAIAAAABAAQAAIAoAAAAABAAAAAEQAAAAAIBACEI=</HashCode>
+      <FileName>DicaseManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacientInfoConsoleEditor.DicaseTypeManager">
+    <Position X="12.25" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABAAQAAIAoAAAAAAIAAAgAQEAAAAIBACEI=</HashCode>
+      <FileName>DicaseTypeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PacientInfoConsoleEditor.MainManager">
+    <Position X="18.25" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>SAAACIAFAAAAQQQAAACAQAQgBAAQQIBQIUAQAIBAiAA=</HashCode>
+      <FileName>MainManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="commandsInfo" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PacientInfoConsoleEditor.PacientManager">
+    <Position X="9.75" Y="4.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAABEgQAAIAoAAAAABAAAAAAQAAAAAIBACEI=</HashCode>
+      <FileName>PacientManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Common.ConsoleIO.Executing.CommandInfo">
+    <Position X="21.75" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Common.ConsoleIO.Executing.CommandManager">
+    <Position X="15" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="PatcientInfo.Data.Interfeces.IDateSet">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="PatcientInfo.Data.Interfeces.IReadOnlyDataSet">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="PatcientInfo.IO.Interfaces.IFileIOController">
+    <Position X="4.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PatcientInfo.Formatting.DicaseTableAttributeSet">
+    <Position X="1.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABgAAAAAAACBAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formatting\DicaseTableAttributeSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Formatting.DicaseTypeTableAttributeSet">
+    <Position X="3.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAABgAAAAAAACBAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formatting\DicaseTypeTableAttributeSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Formatting.DicaseTypeTabulator">
+    <Position X="3.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEIAIwACAAAAEAABAAAAAAAAAABAAAECAAAAAQAAAA=</HashCode>
+      <FileName>Formatting\DicaseTypeTabulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Formatting.DiscaseTabulator">
+    <Position X="1.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEIAIwACAAAAEAABAAAAAAAAAABAAAECAAAAAQAAAA=</HashCode>
+      <FileName>Formatting\DiscaseTabulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Formatting.PatcientTableAttributeSet">
+    <Position X="6.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAABgAAQAAAAABAAgAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Formatting\PatcientTableAttributeSet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PatcientInfo.Formatting.PatcientTabulator">
+    <Position X="6.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEIAIwACAAAAEAABAAAAAAAAAABAAAECAAAAAQAAAA=</HashCode>
+      <FileName>Formatting\PatcientTabulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

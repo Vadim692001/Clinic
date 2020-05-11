@@ -1,0 +1,29 @@
+﻿@using (Ajax.BeginForm(
+    "_SelectData",
+        new AjaxOptions
+        {
+            UpdateTargetId = "data",
+            LoadingElementId = "loading",
+            LoadingElementDuration = 1000
+        }
+        ))
+{
+    <p>
+        Початок прізвища<br />
+        <input type="text" name="selSorname" />
+    </p>
+    <p>
+        Хвороба<br />
+        @Html.DropDownList("selDicaseName", ViewBag.selDicaseName as SelectList)
+    </p>
+    <p>
+        Відбір за лікарем<br />
+        <input type="text" name="selDoctor" />
+    </p>
+    <p>
+        <input type="submit" value="Відібрати" />
+    </p>
+    <div id="loading" class="load" style="display:none">
+        <p>Завантаження даних...</p>
+    </div>
+}

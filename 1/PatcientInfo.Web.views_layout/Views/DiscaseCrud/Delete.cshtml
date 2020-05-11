@@ -1,0 +1,66 @@
+﻿@model PatcientInfo.Web.Models.Dicase.DiscacaseEditingModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Patcient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nazva)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nazva)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DicaseTypeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DicaseTypeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripotion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripotion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.note)
+        </dd>
+
+
+        @*<dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>*@
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Назад", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,36 @@
+﻿@*@model PatcientInfo.Entities.Discase*@
+@model IEnumerable<PatcientInfo.Entities.Discase>
+
+@{ ViewBag.Title = "DiscaseByRegionsInfo";
+    Layout = "~/Views/Shared/_CategoryLayout.cshtml";
+}
+
+
+<h2>Xвороби</h2>
+
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3>
+                <strong>@m.Nazva</strong>
+            </h3>
+            <strong class="lead">Хвороби: @m.DicaseType</strong><br />
+        </div>
+    </div>
+}
+
+
+@section NavMenu {
+    @Html.Action("DiscaseByRegionsMenu", "Navigation",
+         new { categoryName = ViewBag.SelectedCategoryName })
+
+
+    <div>
+        @Html.ActionLink("Назад", "Index")
+    </div>
+
+
+
+}

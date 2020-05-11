@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PatcientInfo.Web.Models.Dicase.DiscaseViewModel>
+
+@{
+            
+                ViewBag.Title = "List";
+}
+
+
+@*<h2>List</h2>*@
+<h2>Список хвороб</h2>
+
+@*<p>
+            @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nazva)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DicaseTypeName)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Descripotion)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.note)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nazva)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DicaseTypeName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Descripotion)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.note)
+            </td>
+            <td>
+                @*@Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |*@
+                @Html.ActionLink("Детально", "_Details", new { id = item.Id })
+                @*@Html.ActionLink("Delete", "Delete", new { id=item.Id })*@
+            </td>
+        </tr>
+    }
+
+
+    <div>
+        @Html.ActionLink("Назад", "Index")
+    </div>
+
+
+</table>

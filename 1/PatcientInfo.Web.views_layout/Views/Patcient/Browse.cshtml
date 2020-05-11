@@ -1,0 +1,57 @@
+﻿@*@model PatcientInfo.Web.Models.PatcientViewModel*@
+@model IEnumerable<PatcientInfo.Web.Models.PatcientViewModel>
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<script type="text/javascript">
+    function OnSuccess(data) {
+        var info = $('#info' + data.Id);
+        info.empty();
+        //if (data.Info == null)
+        //    return;
+        for (var i = 0; i < data.Info.length; i++) {
+            info.append('<p class="lead">' + data.Info[i] + '</p>');
+        }
+    }
+</script>
+
+@*<h2>Browse</h2>*@
+<h2>Інформація про пацієнтів</h2>
+
+@foreach (var m in @Model)
+{
+    <div class="row panel">
+        <div class="col-xs-12">
+            <h3><strong>@m.Sorname</strong></h3>
+            <strong class="lead">Вид хвороби: @m.DicaseName</strong><br />
+            <strong class="lead">Лікарь: @m.Doctor</strong><br />
+            <strong class="lead">Медична кардка: @m.Medical_card </strong><br />
+            <hr />
+            @if (m.HasInfo)
+            {
+                <div id=@string.Concat("info", @m.Id)>
+                    @using (Ajax.BeginForm(
+                        "JsonIdInfo",
+                        new AjaxOptions
+                        {
+                            OnSuccess = "OnSuccess"
+                        }))
+                    {
+                        @Html.Hidden("id", @m.Id)
+                        <input type="submit" value="Опис" />
+                    }
+                </div>
+            }
+            <hr />
+        </div>
+    </div>
+
+
+    <div>
+        @Html.ActionLink("Назад", "Index")
+    </div>
+
+
+}
